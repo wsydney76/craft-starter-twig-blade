@@ -9,8 +9,13 @@ class NavigationComposer
 {
     public function compose($view): void
     {
-        $view
-            ->with('pages', Entry::find()->section('pages')->level(1)->all())
-            ->with('segment1', Craft::$app->getRequest()->getSegment(1));
+        $pages = collect([
+            Entry::find()->section('blog')->one(),
+            Entry::find()->section('guestbook')->one(),
+        ]);
+
+        $pages = $pages->merge(Entry::find()->section('pages')->level(1)->collect());
+
+        $view->with('pages', $pages)->with('segment1', Craft::$app->getRequest()->getSegment(1));
     }
 }

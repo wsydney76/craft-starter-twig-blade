@@ -6,19 +6,6 @@
 
 <nav class="sm:tw-basis-2/3 grow" aria-label="Primary">
     <ul class="sm:flex">
-        <li>
-            <x-partials.navigation-link :href="siteUrl('/blog')" :active="$segment1 === 'blog'">
-                Blog
-            </x-partials.navigation-link>
-        </li>
-        <li>
-            <x-partials.navigation-link
-                :href="siteUrl('/guestbook')"
-                :active="$segment1 === 'guestbook'"
-            >
-                Guestbook
-            </x-partials.navigation-link>
-        </li>
         @foreach ($pages as $page)
             <li>
                 <x-partials.navigation-link

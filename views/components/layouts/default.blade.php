@@ -29,7 +29,9 @@
             Skip to main content
         </a>
 
-        <x-partials.header :$entry />
+        @cache
+            <x-partials.header :$entry />
+        @endcache
 
         <x-partials.flashes />
 
