@@ -1,7 +1,11 @@
+@props([
+    'post',
+    'featured' => false,
+])
 <article class="py-6">
-    @if (! empty($featured))
+    @if ($featured)
         @php
-            $hero = $post?->image?->eagerly()?->one();
+            $hero = $post->image?->eagerly()?->one();
         @endphp
 
         <figure class="image-block my-4">
@@ -17,19 +21,19 @@
 
     <h2 class="text-4xl font-bold">
         <a
-            href="{{ $post?->url }}"
+            href="{{ $post->url }}"
             class="text-red-600 hover:underline focus:underline cursor-pointer"
         >
-            {{ $post?->title }}
+            {{ $post->title }}
         </a>
     </h2>
 
-    <p>{{ $post?->pageSubheading }}</p>
+    <p>{{ $post->pageSubheading }}</p>
 
     <p>
-        @if ($post?->postDate)
+        @if ($post->postDate)
             <time class="text-sm" datetime="{{ atom($post->postDate) }}">
-                {{ $craft->app->formatter->asDate($post->postDate, 'medium') }}
+                {{ $post->postDate }}
             </time>
         @endif
     </p>

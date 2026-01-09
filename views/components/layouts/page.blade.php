@@ -13,7 +13,9 @@
 @endif
 
 <header class="container mx-auto pt-12 pb-6 px-2 text-2xl">
-    <h1 class="font-bold text-4xl sm:text-6xl lg:text-9xl">{{ $entry->title ?? '' }}</h1>
+    <h1 class="font-bold text-4xl sm:text-6xl lg:text-9xl">
+        {{ $entry->title ?? '' }}
+    </h1>
     <p class="mt-4">{{ $entry->pageSubheading ?? '' }}</p>
 
     @if ($entry->section->handle === 'blogPosts')

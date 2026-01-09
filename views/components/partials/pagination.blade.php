@@ -1,3 +1,6 @@
+@props([
+    'pageInfo',
+])
 @if (($pageInfo->prevUrl ?? null) || ($pageInfo->nextUrl ?? null))
     <nav class="pt-6 text-sm" role="navigation" aria-label="Entry pagination">
         @php

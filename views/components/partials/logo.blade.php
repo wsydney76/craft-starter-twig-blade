@@ -2,10 +2,7 @@
 
 <a
     href="{{ $siteUrl }}"
-    @class([
-        'text-red-600',
-        'block w-12 h-12' => $global->logo,
-    ])
+    @class(['text-red-600', 'block w-12 h-12' => (bool) $logo])
 >
     @if ($logo)
         <span class="sr-only">{{ $siteName }}</span>

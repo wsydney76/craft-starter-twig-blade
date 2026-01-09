@@ -1,11 +1,11 @@
 @props([
     'titleBlock' => '',
     'entry',
+    'language',
 ])
-{{-- {% set flashes = craft.app.session.getAllFlashes(true) %} --}}
 
 <!DOCTYPE html>
-<html lang="{{ $craft->app->language }}">
+<html lang="{{ $language }}">
     <head>
         <meta name="HandheldFriendly" content="True" />
         <meta name="MobileOptimized" content="320" />
@@ -97,17 +97,9 @@
             Skip to main content
         </a>
 
-        <x-partials.header :entry="$entry" />
+        <x-partials.header :$entry />
 
-        {{--
-            {% if flashes|length %}
-            <div class="bg-red-600 text-slate-50 text-center">
-            {% for level, flash in flashes %}
-            <p class="{{ level }} container mx-auto p-2 text-md">{{ flash }}</p>
-            {% endfor %}
-            </div>
-            {% endif %}
-        --}}
+        <x-partials.flashes />
 
         <main class="page {{ $entry->slug }}" id="main" tabindex="-1">
             {{ $slot }}
