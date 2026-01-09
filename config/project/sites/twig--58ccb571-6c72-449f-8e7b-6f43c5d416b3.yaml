@@ -1,9 +1,9 @@
-baseUrl: $PRIMARY_SITE_URL
+baseUrl: $PRIMARY_SITE_URL/twig
 enabled: true
-handle: default
+handle: twig
 hasUrls: true
 language: en-US
-name: 'Starter Blog'
+name: Twig
 primary: true
 siteGroup: 6d0d3aa4-84be-441d-8fcc-2ab2d6db2503 # Starter starter
 sortOrder: 1

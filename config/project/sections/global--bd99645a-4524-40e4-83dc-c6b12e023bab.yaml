@@ -1,13 +1,19 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - d55d172f-8b8f-4bb7-b680-31249981c350 # Global
+  -
+    uid: d55d172f-8b8f-4bb7-b680-31249981c350 # Global
 handle: global
 maxAuthors: 1
 name: Global
 propagationMethod: all
 siteSettings:
-  58ccb571-6c72-449f-8e7b-6f43c5d416b3: # Starter Blog
+  58ccb571-6c72-449f-8e7b-6f43c5d416b3: # Twig
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+  c436ad5b-1a67-4fee-a936-b0c7032ba3c0: # Blade
     enabledByDefault: true
     hasUrls: false
     template: null

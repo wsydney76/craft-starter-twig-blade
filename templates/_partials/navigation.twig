@@ -1,11 +1,19 @@
-  {% set pages = craft.entries.section('pages').level(1).all() %}
-  <nav class="sm:tw-basis-2/3 grow-1" aria-label="Primary">
+{% set pages = craft.entries.section('pages').level(1).all() %}
+<nav class="sm:tw-basis-2/3 grow-1" aria-label="Primary">
     <ul class="sm:flex">
-      <li><a href="/blog" class="block p-2 hover:underline hover:text-red-600{% if segment1 == "blog" %} text-red-600" aria-current="page{% endif %}">Blog</a></li>
-      <li><a href="/guestbook" class="block p-2 hover:underline hover:text-red-600{% if segment1 == "guestbook" %} text-red-600" aria-current="page{% endif %}">Guestbook</a></li>
-      {% for page in pages %}
-        <li><a href="{{ page.url }}" class="block p-2 hover:underline hover:text-red-600{% if segment1 == page.slug %} text-red-600" aria-current="page{% endif %}">{{ page.title }}</a></li>
-      {% endfor %}
+        <li><a href="/blog" class="block p-2 hover:underline hover:text-red-600{% if segment1 == "blog" %} text-red-600"
+               aria-current="page{% endif %}">Blog</a></li>
+        <li><a href="/guestbook"
+               class="block p-2 hover:underline hover:text-red-600{% if segment1 == "guestbook" %} text-red-600"
+               aria-current="page{% endif %}">Guestbook</a></li>
+        {% for page in pages %}
+            <li><a href="{{ page.url }}"
+                   class="block p-2 hover:underline hover:text-red-600{% if segment1 == page.slug %} text-red-600"
+                   aria-current="page{% endif %}">{{ page.title }}</a></li>
+        {% endfor %}
+        {% for navEntry in entry.localized.all %}
+            <li class="block p-2 hover:underline"><a href="{{ navEntry.url }}">{{ navEntry.site.name }}</a></li>
+        {% endfor %}
     </ul>
-  </nav>
+</nav>
   
