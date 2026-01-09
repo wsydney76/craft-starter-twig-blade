@@ -1,3 +1,5 @@
 <x-layouts.default :entry="$entry">
-    {{ $entry->pageContent }}
+    <x-layouts.page :entry="$entry">
+        {!! $entry->pageContent !!}
+    </x-layouts.page>
 </x-layouts.default>

@@ -8,7 +8,7 @@
     <ul class="sm:flex">
         <li>
             <a
-                href="/blog"
+                href="{{ siteUrl('/blog') }}"
                 @class(['block p-2 hover:underline hover:text-red-600', 'text-red-600' => $segment1 === 'blog'])
                 @if($segment1 === 'blog') aria-current="page" @endif
             >
@@ -17,7 +17,7 @@
         </li>
         <li>
             <a
-                href="/guestbook"
+                href="{{ siteUrl('/guestbook') }}"
                 @class(['block p-2 hover:underline hover:text-red-600', 'text-red-600' => $segment1 === 'guestbook'])
                 @if($segment1 === 'guestbook') aria-current="page" @endif
             >

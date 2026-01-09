@@ -12,7 +12,7 @@
   <header class="container mx-auto pt-12 pb-6 px-2 text-2xl">
     <h1 class="font-bold text-4xl sm:text-6xl lg:text-9xl">{{ entry.title }}</h1>
     <p class="mt-4">{{ entry.pageSubheading }}</p>
-    {% if entry.section.handle == 'article' %}
+    {% if entry.section.handle == 'blogPosts' %}
     <div class="text-xs mt-4">
       {% set category = entry.category.eagerly().one() %}
       <p>{% if category %}<span class="font-bold">{{ category.title }}</span> | {% endif %}<time datetime="{{ entry.postDate|atom }}">{{ entry.postDate|date }}</time></p>

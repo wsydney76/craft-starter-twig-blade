@@ -21,6 +21,6 @@ siteSettings:
   c436ad5b-1a67-4fee-a936-b0c7032ba3c0: # Blade
     enabledByDefault: true
     hasUrls: true
-    template: 'blade:entries.blog'
+    template: 'blade:entries.blog-post'
     uriFormat: 'blog/{slug}'
 type: channel
