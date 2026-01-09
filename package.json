@@ -5,7 +5,9 @@
     "scripts": {
         "dev": "NODE_ENV=dev vite",
         "build": "NODE_ENV=production vite build --mode production",
-        "prettier-views": "npx prettier --write \"views\" --parser blade"
+        "prettier-views": "npx prettier --write \"views\" --parser blade",
+        "prettier-modules": "npx prettier --write modules/**/*.{php,twig}",
+        "prettier-templates": "npx prettier --write templates/**/*.twig"
     },
     "devDependencies": {
         "@prettier/plugin-php": "^0.24.0",

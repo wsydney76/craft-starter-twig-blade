@@ -7,32 +7,26 @@
 <nav class="sm:tw-basis-2/3 grow" aria-label="Primary">
     <ul class="sm:flex">
         <li>
-            <a
-                href="{{ siteUrl('/blog') }}"
-                @class(['block p-2 hover:text-red-600 hover:underline', 'text-red-600' => $segment1 === 'blog'])
-                @if($segment1 === 'blog') aria-current="page" @endif
-            >
+            <x-partials.navigation-link :href="siteUrl('/blog')" :active="$segment1 === 'blog'">
                 Blog
-            </a>
+            </x-partials.navigation-link>
         </li>
         <li>
-            <a
-                href="{{ siteUrl('/guestbook') }}"
-                @class(['block p-2 hover:text-red-600 hover:underline', 'text-red-600' => $segment1 === 'guestbook'])
-                @if($segment1 === 'guestbook') aria-current="page" @endif
+            <x-partials.navigation-link
+                :href="siteUrl('/guestbook')"
+                :active="$segment1 === 'guestbook'"
             >
                 Guestbook
-            </a>
+            </x-partials.navigation-link>
         </li>
         @foreach ($pages as $page)
             <li>
-                <a
-                    href="{{ $page->url }}"
-                    @class(['block p-2 hover:text-red-600 hover:underline', 'text-red-600' => $segment1 === $page->slug])
-                    @if($segment1 === $page->slug) aria-current="page" @endif
+                <x-partials.navigation-link
+                    :href="$page->url"
+                    :active="$segment1 === $page->slug"
                 >
                     {{ $page->title }}
-                </a>
+                </x-partials.navigation-link>
             </li>
         @endforeach
 
