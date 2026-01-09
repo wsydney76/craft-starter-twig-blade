@@ -2,6 +2,7 @@
   "plugins": [
     "@prettier/plugin-php",
     "prettier-plugin-blade",
+    "@zackad/prettier-plugin-twig",
     "prettier-plugin-tailwindcss"
   ],
   "singleQuote": true,
@@ -9,5 +10,13 @@
   "printWidth": 100,
   "semi": true,
   "trailingComma": "es5",
+  "twigOutputEndblockName": true,
+  "twigAlwaysBreakObjects": false,
+  "twigMultiTags": [
+    "nav,endnav",
+    "switch,case,default,endswitch",
+    "ifchildren,endifchildren",
+    "cache,endcache"
+  ],
   "tailwindStylesheet": "./resources/css/app.css"
 }

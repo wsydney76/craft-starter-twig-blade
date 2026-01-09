@@ -4,12 +4,12 @@
     'segment1' => '',
 ])
 
-<nav class="sm:tw-basis-2/3 grow-1" aria-label="Primary">
+<nav class="sm:tw-basis-2/3 grow" aria-label="Primary">
     <ul class="sm:flex">
         <li>
             <a
                 href="{{ siteUrl('/blog') }}"
-                @class(['block p-2 hover:underline hover:text-red-600', 'text-red-600' => $segment1 === 'blog'])
+                @class(['block p-2 hover:text-red-600 hover:underline', 'text-red-600' => $segment1 === 'blog'])
                 @if($segment1 === 'blog') aria-current="page" @endif
             >
                 Blog
@@ -18,7 +18,7 @@
         <li>
             <a
                 href="{{ siteUrl('/guestbook') }}"
-                @class(['block p-2 hover:underline hover:text-red-600', 'text-red-600' => $segment1 === 'guestbook'])
+                @class(['block p-2 hover:text-red-600 hover:underline', 'text-red-600' => $segment1 === 'guestbook'])
                 @if($segment1 === 'guestbook') aria-current="page" @endif
             >
                 Guestbook
@@ -28,7 +28,7 @@
             <li>
                 <a
                     href="{{ $page->url }}"
-                    @class(['block p-2 hover:underline hover:text-red-600', 'text-red-600' => $segment1 === $page->slug])
+                    @class(['block p-2 hover:text-red-600 hover:underline', 'text-red-600' => $segment1 === $page->slug])
                     @if($segment1 === $page->slug) aria-current="page" @endif
                 >
                     {{ $page->title }}
