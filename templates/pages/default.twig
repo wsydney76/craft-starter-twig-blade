@@ -23,8 +23,10 @@
         {% endif %}
     </header>
     <section class="page__content">
-        <div class="container mx-auto py-12 px-2 text-balance prose">
-            {{ entry.pageContent }}
+        <div class="container mx-auto px-2 py-12 text-balance">
+            <div class="prose prose-lg max-w-none">
+                {{ entry.pageContent }}
+            </div>
         </div>
         {% block landing %}{% endblock %}
     </section>

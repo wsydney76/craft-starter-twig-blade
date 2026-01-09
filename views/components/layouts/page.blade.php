@@ -12,8 +12,8 @@
     @endif
 @endif
 
-<header class="container mx-auto pt-12 pb-6 px-2 text-2xl">
-    <h1 class="font-bold text-4xl sm:text-6xl lg:text-9xl">
+<header class="container mx-auto px-2 pt-12 pb-6 text-2xl">
+    <h1 class="text-4xl font-bold sm:text-6xl lg:text-9xl">
         {{ $entry->title }}
     </h1>
     <p class="mt-4">{{ $entry->pageSubheading }}</p>
@@ -24,8 +24,10 @@
 </header>
 
 <section class="page__content">
-    <div class="container mx-auto py-12 px-2 text-balance prose">
-        {!! $entry->pageContent !!}
+    <div class="container mx-auto px-2 py-12 text-balance">
+        <div class="prose prose-lg max-w-none">
+            {!! $entry->pageContent !!}
+        </div>
     </div>
 
     {{ $landing }}

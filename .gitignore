@@ -4,3 +4,4 @@
 /web/uploads/*
 .DS_Store
 /node_modules
+/web/dist/assets
