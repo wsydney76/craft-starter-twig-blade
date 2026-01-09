@@ -1,0 +1,13 @@
+{
+  "name": "prettier-php-blade",
+  "private": true,
+  "scripts": {
+    "prettier-views": "npx prettier --write \"views\" --parser blade"
+  },
+  "devDependencies": {
+    "@prettier/plugin-php": "^0.24.0",
+    "prettier": "^3.6.2",
+    "prettier-plugin-blade": "^2.1.21",
+    "prettier-plugin-tailwindcss": "^0.6.14"
+  }
+}

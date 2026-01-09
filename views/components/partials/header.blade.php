@@ -4,7 +4,10 @@
             <x-partials.logo />
         </div>
         <div>
-            <x-partials.navigation :segment1="$craft->app->request->getSegment(1)" :entry="$entry" />
+            <x-partials.navigation
+                :segment1="$craft->app->request->getSegment(1)"
+                :entry="$entry"
+            />
         </div>
     </div>
 </header>
