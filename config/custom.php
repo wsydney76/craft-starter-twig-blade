@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'perPage' => 1,
+    'perPage' => 4,
     'otherPostsLimit' => 3,
     'showMeta' => ['blogPosts'],
 ];
