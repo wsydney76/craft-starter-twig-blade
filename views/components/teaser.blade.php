@@ -4,12 +4,10 @@
 ])
 <article class="py-6">
     @if ($featured)
-        @php
-            $hero = $post->image?->eagerly()?->one();
-        @endphp
+        @php($hero = $post->image->eagerly()->one())
 
         <figure class="image-block my-4">
-            <a href="{{ $post?->url }}">
+            <a href="{{ $post->url }}">
                 @if ($hero)
                     <img src="{{ $hero->getUrl('hero') }}" alt="{{ $hero->alt }}" />
                 @else
@@ -31,10 +29,8 @@
     <p>{{ $post->pageSubheading }}</p>
 
     <p>
-        @if ($post->postDate)
-            <time class="text-sm" datetime="{{ atom($post->postDate) }}">
-                {{ $post->postDate }}
-            </time>
-        @endif
+        <time class="text-sm" datetime="{{ atom($post->postDate) }}">
+            {{ $post->postDate }}
+        </time>
     </p>
 </article>
