@@ -1,3 +1,18 @@
+# Craft CMS Starter - Twig and Blade
+
+This is the original Craft CMS starter project, with a second site powered by Laravel's [Blade](https://laravel.com/docs/12.x/blade) templating engine included as well.
+
+Just a learning experience, evaluating porting an existing Laravel project to Craft CMS.
+
+Powered by [a provisional PoC plugin enabling Blade in Craft 5](https://github.com/wsydney76/craft5-blade).
+
+Find the implementation of Blade in this project:
+
+* PHP part in `modules/main` (shared data, controllers and view composers)
+* Blade templates in `views`
+
+<hr>
+
 # Craft CMS + Twig Starter
 
 This is a basic blog starter project for creating [Craft CMS](https://craftcms.com/) using the native [Twig](https://craftcms.com/docs/5.x/development/twig.html) templating language. It's a simple install that requires no database dump and no front-end tooling. It includes a single, first-party plugin ([CKeditor](https://plugins.craftcms.com/ckeditor)) to support a richer authoring experience.
